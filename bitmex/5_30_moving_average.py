@@ -124,7 +124,7 @@ if __name__ == "__main__":
     """
     バックテストを実行したい場合は、test_flg = Trueに設定して実行してください
     """
-    test_flg = False
+    test_flg = True
     
     if test_flg:
         MA_bot.describeResult()

@@ -315,7 +315,7 @@ class Bot:
            df_candleStick = self.processCandleStick()
 
        judgement = self.judgeForTest(df_candleStick)
-       pl, buyEntrySignals, sellEntrySignals, buyCloseSignals, sellCloseSignals, nOfTrade, plPerTrade = self.backtest(judgement, df_candleStick, self.lot, self.cost)
+       pl, buyEntrySignals, sellEntrySignals, buyCloseSignals, sellCloseSignals, nOfTrade, plPerTrade = self.backtest(judgement, df_candleStick, self.lot, 0)
 
        plt.figure()
        plt.subplot(211)
@@ -360,9 +360,9 @@ class Bot:
        length:データの取得期間．period:ローソク足の期間（文字列で分数を指定，Ex:5分足なら"5"）
        """
 
-       now = datetime.datetime.now().strftime('%s') # 現在時刻の取得
+       now = datetime.datetime.now().timestamp() # 現在時刻の取得
        r = requests.get('https://www.bitmex.com/api/udf/history?symbol=XBTUSD&resolution='+ self.candlePeriod 
-                        +'&from=' +str(int(now)-3600*self.candleLength) + '&to=' + now) # 過去xx時間分の過去データ取得
+                        +'&from=' +str(int(now)-3600*self.candleLength) + '&to=' + str(int(now))) # 過去xx時間分の過去データ取得
        res = r.json()
        
        df_res = pd.DataFrame(res)
