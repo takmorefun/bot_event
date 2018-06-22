@@ -7,6 +7,7 @@ document for bot event
 
 【windows】
 https://www.anaconda.com/download/#windows
+
 【macos】
 https://www.anaconda.com/download/#macos
 
@@ -16,12 +17,18 @@ https://www.anaconda.com/download/#macos
  
 ## 必要なパッケージのインストール
 ボットの構築するために、追加でインストールしなければならないのは以下パッケージになります。
+
 - pybitflyer(bitflyerを使う場合)
 - ccxt(bitmexを使う場合)
 
 パッケージのインストールはpipコマンドを使用して行います。
 
+ターミナル（windowsだとコマンドプロンプト）を起動して、以下コマンドを実行して下さい
 
-ターミナル（windowsだとコマンドプロンプト）を起動します。
+$ pip install pybtflyer
+
+$ pip install ccxt
+
+これで、環境構築は完了です。
 
 
