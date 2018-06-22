@@ -25,9 +25,12 @@ https://www.anaconda.com/download/#macos
 
 ターミナル（windowsだとコマンドプロンプト）を起動して、以下コマンドを実行して下さい
 
-$ pip install pybtflyer
-
-$ pip install ccxt
+```
+pip install pybtflyer
+```
+```
+pip install ccxt
+```
 
 これで、環境構築は完了です。
 
