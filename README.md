@@ -1,7 +1,7 @@
 # bot_event
 document for bot event
 
-#python環境構築
+#　python環境構築
 
 anacondaのインストール
 以下URLよりanacondaをダウンロードしてください。
